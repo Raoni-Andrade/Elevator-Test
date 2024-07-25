@@ -6,7 +6,7 @@ function Elevator() {
   const [isRunning, setIsRunning] = useState(true);
   let [people, setPeople] = useState(0);
   let [floor, setFloor] = useState(0);
-  const limit = 2;
+  const limit = 10;
 
   const exibirMenu = () => {
     console.log("-----------------------");
@@ -38,7 +38,7 @@ function Elevator() {
       case "3":
         // Subir andar
 
-        if (floor >= 0 && floor < 3 && people <= limit) {
+        if (floor >= 0 && floor < 12 && people <= limit) {
           setFloor(floor += 1);
           console.log(`Subimos um andar. Agora estamos no andar ${floor}.`);
           break;
